@@ -30,7 +30,6 @@ ingress {
   protocol = "TCP"
   cidr_blocks = ["0.0.0.0/0"]
   description = "http open"
-
 }
 # outbond rules
 egress {
@@ -51,7 +50,7 @@ resource "aws_instance" "my_instance" {
   key_name = aws_key_pair.myec2_key.key_name
   security_groups = [aws_security_group.tera_sec_group.name]
   instance_type = "t2.micro"
-  ami = "ami-0cb91c7de36eed2cb"
+  ami = "ami-0ecb62995f68bb549"
   root_block_device {
         volume_size = 14
         volume_type = "gp3"
